@@ -1,0 +1,29 @@
+<div ng-controller="ListOfUserController as list">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Userid</th>
+				<th>address</th>
+				<th>emailAddress</th>
+				<th>firstname</th>
+				<th>lastname</th>
+				<th>mobilenumber</th>
+				<th colspan=2>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="user in users">
+				<td>{{user.userId}}</td>
+				<td>{{user.address}}</td>
+				<td>{{user.emailAddress}}</td>
+				<td>{{user.firstName}}</td>
+				<td>{{user.lastName}}</td>
+				<td>{{user.mobileNumber}}</td>
+				<td><a class="btn btn-primary"
+					ng-click="deleteUser(user.userId)"> delete</a>
+				 <a href="" ng-click="update(user.userId)">update</a>
+					</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
